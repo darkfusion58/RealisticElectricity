@@ -9,7 +9,6 @@ public class SimpleCapacitor implements ICapacitor {
 	public int firstNode, secondNode;
 	
 	private double voltage, step;
-	private double vhist1;
 	
 	private double steadystate;
 	
@@ -25,8 +24,6 @@ public class SimpleCapacitor implements ICapacitor {
 		
 		step = 1.0d;
 		voltage = 0.0d;
-		
-		vhist1 = 0.0d;
 		
 		steadystate = 0.0d;
 	}
@@ -55,7 +52,6 @@ public class SimpleCapacitor implements ICapacitor {
 	
 	public void setVoltage(double v) {
 		voltage = v;
-		vhist1 = v;
 	}
 	
 	public void setCapacitance(double c) {
