@@ -2,14 +2,14 @@ package realisticelectricity.energy;
 
 import java.util.HashSet;
 
-import net.minecraftforge.event.ForgeSubscribe;
+import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 import realisticelectricity.api.events.*;
 
 public class NetworkManager 
 {
 	public static HashSet<ElectricNetwork> networks = new HashSet<ElectricNetwork>();
 	
-	@ForgeSubscribe
+	@SubscribeEvent
 	public void onConnectEvent(ConnectEvent evt)
 	{
 		for(ElectricNetwork net : networks)
@@ -21,7 +21,7 @@ public class NetworkManager
 		}
 	}
 	
-	@ForgeSubscribe
+	@SubscribeEvent
 	public void onDisconnectEvent(DisconnectEvent evt)
 	{
 		for(ElectricNetwork net : networks)

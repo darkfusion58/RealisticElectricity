@@ -1,8 +1,8 @@
 package realisticelectricity.api.energy;
 
-import thutconcrete.api.utils.Vector3;
+import thut.api.maths.Vector3;
 import net.minecraft.world.World;
-import net.minecraftforge.common.ForgeDirection;
+import net.minecraftforge.common.util.ForgeDirection;
 
 public interface INetworkConnection 
 {
