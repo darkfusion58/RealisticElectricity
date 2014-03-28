@@ -1,6 +1,6 @@
 package realisticelectricity.energy;
 
-import static net.minecraftforge.common.ForgeDirection.*;
+import static net.minecraftforge.common.util.ForgeDirection.*;
 
 import java.util.ArrayList;
 import java.util.HashSet;
@@ -8,12 +8,12 @@ import java.util.List;
 import java.util.Set;
 
 import net.minecraft.world.World;
-import net.minecraftforge.common.ForgeDirection;
+import net.minecraftforge.common.util.ForgeDirection;
 
 import realisticelectricity.api.energy.INetworkConnection;
 import realisticelectricity.api.energy.blocks.IConductor;
 import realisticelectricity.api.energy.blocks.IElectricBlock;
-import thutconcrete.api.utils.Vector3;
+import thut.api.maths.Vector3;
  
 public class ElectricNetwork
 {

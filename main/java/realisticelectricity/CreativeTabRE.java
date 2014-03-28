@@ -3,6 +3,8 @@ package realisticelectricity;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.init.Items;
+import net.minecraft.item.Item;
 
 public class CreativeTabRE extends CreativeTabs
 {
@@ -19,4 +21,9 @@ public class CreativeTabRE extends CreativeTabs
     public String getTranslatedTabLabel(){
         return this.getTabLabel();
     }
+
+	@Override
+	public Item getTabIconItem() {
+		return Items.redstone;
+	}
 }
