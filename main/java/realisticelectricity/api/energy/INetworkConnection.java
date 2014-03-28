@@ -14,12 +14,6 @@ public interface INetworkConnection
 	
 	/**
 	 * 
-	 * @return An array of the valid ForgeDirections for connections.  should return null if no valid connections.
-	 */
-	public ForgeDirection[] validSides();
-	
-	/**
-	 * 
 	 * @return The location of this device connected to the network
 	 */
 	public Vector3 getLocation();
@@ -56,4 +50,6 @@ public interface INetworkConnection
 	 * @param power
 	 */
 	public void onOverHeat(double power);
+	
+	public int hashCode();
 }

@@ -1,9 +1,11 @@
 package realisticelectricity.api.energy.blocks;
 
+import net.minecraftforge.common.util.ForgeDirection;
 import realisticelectricity.api.energy.EnergyPack;
 import realisticelectricity.api.energy.INetworkConnection;
+import realisticelectricity.api.energy.IPolarDevice;
 
-public interface IElectricBlock extends INetworkConnection
+public interface IElectricBlock extends INetworkConnection, IPolarDevice
 {
 	/**
 	 * In the case of a source, this would return the maximum voltage output of the device.  

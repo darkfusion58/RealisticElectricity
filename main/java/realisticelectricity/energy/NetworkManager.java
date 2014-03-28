@@ -7,29 +7,21 @@ import realisticelectricity.api.events.*;
 
 public class NetworkManager 
 {
-	public static HashSet<ElectricNetwork> networks = new HashSet<ElectricNetwork>();
+	public static HashSet<ElectricNetworkOld> networks = new HashSet<ElectricNetworkOld>();
 	
 	@SubscribeEvent
 	public void onConnectEvent(ConnectEvent evt)
 	{
-		for(ElectricNetwork net : networks)
+		for(ElectricNetworkOld net : networks)
 		{
-			if(net.toConnectNetwork(evt.component))
-			{
-				net.connectToNetwork(evt.component);
-			}
 		}
 	}
 	
 	@SubscribeEvent
 	public void onDisconnectEvent(DisconnectEvent evt)
 	{
-		for(ElectricNetwork net : networks)
+		for(ElectricNetworkOld net : networks)
 		{
-			if(net.contains(evt.component))
-			{
-				net.disconnectFromNetwork(evt.component);
-			}
 		}
 	}
 }

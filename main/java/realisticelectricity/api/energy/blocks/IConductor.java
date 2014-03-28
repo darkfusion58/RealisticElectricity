@@ -1,5 +1,7 @@
 package realisticelectricity.api.energy.blocks;
 
+import net.minecraftforge.common.util.ForgeDirection;
+import realisticelectricity.api.color.IColorable;
 import realisticelectricity.api.energy.INetworkConnection;
 
 /**
@@ -8,11 +10,13 @@ import realisticelectricity.api.energy.INetworkConnection;
  *  devices will only receive onOverVoltage and onOverHeat, and will not be updated
  *  about anything else that happens in the network.
  *  
+ *  Do not have a tile entity implement this interface, the tile entity should instead
+ *  implement IConductorProvider.
  *  
  * @author Thutmose
  *
  */
-public interface IConductor extends INetworkConnection
+public interface IConductor extends IColorable, INetworkConnection
 {
-	
+	public abstract IConductorProvider getProvider();
 }
